@@ -1,0 +1,22 @@
+import express from 'express';
+let router = express.Router();
+import packApi from './packs.router.js';
+import categoryApi from './category.router.js';
+import roleApi from './role.router.js';
+import userApi from './user.router.js';
+import storeApi from './store.router.js';
+import spamsApi from './spams.router.js';
+import blockApi from './block.router.js';
+import employeeApi from './employee.admin.router.js';
+import homeApi from './home.router.js';
+router.use('/packs', packApi);
+router.use('/category', categoryApi);
+router.use('/roles', roleApi);
+router.use('/users', userApi);
+router.use('/stores', storeApi);
+router.use('/spams', spamsApi);
+router.use('/block', blockApi);
+router.use('/employee', employeeApi);
+router.use('/home', homeApi);
+
+export default router;
